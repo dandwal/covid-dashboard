@@ -1,0 +1,21 @@
+{
+  "name": "covid-dashboard",
+  "version": "0.1.0",
+  "description": "Dashboard for the covid surveillance",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "dev": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "author": "Office for National Statistics, Digital Publishing",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "prettier": "^2.2.0"
+  },
+  "dependencies": {
+    "luxon": "^1.25.0"
+  }
+}
