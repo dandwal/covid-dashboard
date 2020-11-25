@@ -1,0 +1,27 @@
+<header class="border-bottom--iron-sm border-bottom--iron-md">
+	<a class="skiplink" href="#main" tabindex="0">
+		Skip to main content
+	</a>
+
+	<div class="wrapper">
+		<div class="header col-wrap">
+
+			{% include "header/logo.html" %}
+
+			{% if page.secondary-nav != false %}
+				{% include "header/secondary-nav.html" %}
+			{% endif %}
+
+		</div>
+	</div>
+
+	{% if page.primary-nav != false %}
+		{% include "header/primary-nav.html" %}
+	{% endif %}
+
+
+	{% if page.search != false %}
+		{% include "header/search.html" %}
+	{% endif %}
+
+</header>
