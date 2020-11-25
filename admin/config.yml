@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+  media_folder: "_site/images/uploads"
+  public_folder: "/images/uploads"
+  collections:
+    - name: "tiles"        #The name of the collection and should match our tiles.json file's tag
+      label: "tiles"       #The name of the collection on the CMS itself
+      folder: "tiles"      #The folder that our site tiles will be loaded from and saved to
+      create: true             #Tells the CMS that new tiles can be created
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  #this sets the URL for the tile
+      fields:
+        - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tile.njk" }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Date", name: "date", widget: "date", default: "" }
+        - { label: "tile Body", name: "body", widget: "markdown" }
+        - { label: "Featured Image", name: "featuredImage", widget: "image" }

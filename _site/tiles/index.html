@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <meta name="robots" content="noindex, nofollow">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
   <body>
@@ -318,6 +319,17 @@ Taking part in a survey?
 <div id="viewport-sm" class="js-viewport-size"></div><div id="viewport-md" class="js-viewport-size"></div><div id="viewport-lg" class="js-viewport-size"></div>
     
 
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 
   <!--[if gt IE 8]><!-->
