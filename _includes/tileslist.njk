@@ -1,0 +1,15 @@
+<ul>
+    ok
+    {% for tile in tileslist %}
+        hmm
+        <li>
+            <strong>
+                <a href="{{ tile.url | url }}">{{ tile.data.title }}</a>
+            </strong>
+            -
+            <time datetime="{{ tile.date | htmlDateString }}">{{ tile.date | readableDate }}</time>
+            -
+            <span>{{ tile.data.description }}</span>
+        </li>
+    {% endfor %}
+</ul>
